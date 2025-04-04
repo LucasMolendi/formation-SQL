@@ -78,5 +78,5 @@ select * from article;
 
 ### Commande d'affichage de la commande de Brad Pitt :
 ```SQL
-SELECT clients.prenom AS 'prenom' ,clients.nom AS 'nom', commande.date_achat AS 'date_achat', article.nom AS 'article', article.prix AS 'prix', commande.nombre AS 'nb', commande.total AS 'total' FROM clients INNER JOIN commande ON clients.id = commande.client_id INNER JOIN article ON commande.id = article.commande_id WHERE clients.nom like 'PITT';
+SELECT clients.nom AS Nom, clients.prenom AS Prenom, commande.date_achat AS date_achat, article.nom AS Nom, article.prix AS Prix, commande.nombre AS nombre, commande.total AS total FROM commande  INNER JOIN clients ON commande.client_id = clients.id  INNER JOIN article ON commande.id = article.commande_id; 
 ```
